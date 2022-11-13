@@ -14,7 +14,7 @@ last_modified_csv = "Last Modified: %s" % time.ctime(os.path.getmtime(file))
 df= pd.read_csv(file)
 df["DATEP"] = pd.to_datetime(df.Date,format='%d/%m/%Y')
 
-# Raname and Remap columns
+# rename and Remap columns
 df['Year'] = df.apply(lambda row: datetime.datetime.strptime(str(row.Date), "%d/%m/%Y").year , axis = 1)
 df['Month Name'] = df.apply(lambda row: datetime.datetime.strptime(str(row.Date), "%d/%m/%Y").strftime("%b") , axis = 1)
 df['YEAR_MONTH'] = df.apply(lambda row: datetime.datetime.strptime(str(row.Date), "%d/%m/%Y").strftime("%b %Y") , axis = 1)
