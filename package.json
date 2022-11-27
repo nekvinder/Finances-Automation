@@ -25,7 +25,7 @@
     "@notionhq/client": "^2.2.2",
     "@slack/web-api": "^6.7.2",
     "date-and-time": "^2.4.1",
-    "discord.js": "^14.6.0",
+    "dotenv": "^16.0.3",
     "json2csv": "^5.0.7",
     "puppeteer": "^19.2.2"
   },
