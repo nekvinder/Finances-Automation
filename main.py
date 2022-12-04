@@ -73,6 +73,19 @@ def createNonInvestmentsTimeline(data):
     return monthlyTimelineChart
 
 
+def createLTInvestmentsPie(data):
+    dataFrame = data[(data["Category-Select"] == "Long Term Investments")]
+    dataFrame = pd.pivot_table(dataFrame, values=["AMOUNT"], index=["Name"], aggfunc=sum).reset_index()
+    fig = px.pie(
+        dataFrame,
+        values="AMOUNT",
+        names="Name",
+        title="Longterm Investments distribution",
+    )
+    fig.update_traces(textinfo="text+value+percent")
+    return fig
+
+
 def createPocketMoneyVSPersonalExpensesPie(data):
     dataFrame = data[(data["Category-Select"] == "Monthly Pocket Money") | (data["Category-Select"] == "Personal Expenses")]
     dataFrame = pd.pivot_table(dataFrame, values=["AMOUNT"], index=["CATEGORY"], aggfunc=sum).reset_index()
@@ -142,6 +155,7 @@ def startDashApp():
                 className="header",
                 style={"backgroundColor": "#F5F5F5"},
             ),
+            getHtmlDiv(createLTInvestmentsPie(df), False),
             html.Div(
                 children=[getHtmlDiv(createIncomeDistributionPie(df), False), getHtmlDiv(createPocketMoneyVSPersonalExpensesPie(df), False)],
                 style={"display": "flex", "flex-direction": "row"},
