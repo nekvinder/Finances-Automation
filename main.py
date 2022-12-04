@@ -11,6 +11,8 @@ from dash.dependencies import Input, Output
 import os.path
 import time
 
+PERSONAL_EXPENSES_LIMIT = 10000
+
 file = "data.csv"
 last_modified_csv = "Last Modified: %s" % time.ctime(os.path.getmtime(file))
 # df= pd.read_csv("Expense Record.csv")
@@ -40,6 +42,12 @@ def createMonthlyPersonalExpensesBars(title, data, filterFields=[]):
     monthlyTimeline = pd.pivot_table(dataFrame, values=["AMOUNT"], index=["YEAR_MONTH_DATE", "CATEGORY"], aggfunc=sum).reset_index()
     monthlyTimeline.columns = [x.upper() for x in monthlyTimeline.columns]
     monthlyTimelineChart = px.bar(monthlyTimeline, x="YEAR_MONTH_DATE", y="AMOUNT", title=title, color="CATEGORY", barmode="group")
+    monthlyTimelineChart.add_hline(y=PERSONAL_EXPENSES_LIMIT)
+    monthlyTimelineChart.add_trace(
+        go.Scatter(
+            x=[datetime.date.today()], y=[PERSONAL_EXPENSES_LIMIT], mode="markers+text", name="Markers and Text", text=["Personal Expenses limit"], textposition="bottom center"
+        )
+    )
     monthlyTimelineChart.update_yaxes(title="Expenses (R)", visible=True, showticklabels=True)
     monthlyTimelineChart.update_xaxes(title="Date", visible=True, showticklabels=True)
     return monthlyTimelineChart

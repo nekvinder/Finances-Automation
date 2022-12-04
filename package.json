@@ -9,6 +9,8 @@
   "license": "MIT",
   "keywords": [],
   "scripts": {
+    "start:new": "yarn downloadNotion && yarn buildDashboard",
+    "start": "yarn buildDashboard",
     "downloadNotion": "npx ts-node src/index.ts",
     "downloadHtmlDash": "npx ts-node src/download.ts",
     "downloadNotion:watch": "watchexec --exts ts -- 'clear; npx ts-node src/index.ts'",
