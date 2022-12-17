@@ -58,7 +58,8 @@ class GenerateDash:
         return monthlyTimelineChart
 
     @staticmethod
-    def createMonthlyTimeline(dataFrame):
+    def createMonthlyTimeline(data):
+        dataFrame = copy.deepcopy(data)
         monthlyTimeline = pd.pivot_table(dataFrame, values=["AMOUNT"], index=["DATEP", "CATEGORY"], aggfunc=sum).reset_index()
         monthlyTimeline.columns = [x.upper() for x in monthlyTimeline.columns]
         monthlyTimelineChart = px.line(monthlyTimeline, x="DATEP", y="AMOUNT", title="Monthly Timeline", color="CATEGORY", markers=True)
@@ -67,9 +68,16 @@ class GenerateDash:
         return monthlyTimelineChart
 
     @staticmethod
+    def createGuidelinesText(data):
+        dataFrame = copy.deepcopy(data)
+        text = ''
+
+
+    @staticmethod
     def createNonInvestmentsTimeline(data):
-        dataFrame = data[data["Category-Select"] != "Long Term Investments"]
-        dataFrame = dataFrame[data["Category-Select"] != "Emergency Fund"]
+        dataFrame = copy.deepcopy(data)
+        dataFrame = dataFrame[dataFrame["Category-Select"] != "Long Term Investments"]
+        dataFrame = dataFrame[dataFrame["Category-Select"] != "Emergency Fund"]
         monthlyTimeline = pd.pivot_table(dataFrame, values=["AMOUNT"], index=["DATEP", "CATEGORY"], aggfunc=sum).reset_index()
         monthlyTimeline.columns = [x.upper() for x in monthlyTimeline.columns]
         monthlyTimelineChart = px.line(monthlyTimeline, x="DATEP", y="AMOUNT", title="Expenses Timeline", color="CATEGORY", markers=True)
@@ -79,20 +87,24 @@ class GenerateDash:
 
     @staticmethod
     def createLTInvestmentsPie(data):
-        dataFrame = data[(data["Category-Select"] == "Long Term Investments")]
+        dataFrame = copy.deepcopy(data)
+        dataFrame = dataFrame[(dataFrame["Category-Select"] == "Long Term Investments")]
         dataFrame = pd.pivot_table(dataFrame, values=["AMOUNT"], index=["Name"], aggfunc=sum).reset_index()
+        totalLTInvestments = sum(dataFrame['AMOUNT'])
+        print(dataFrame)
         fig = px.pie(
             dataFrame,
             values="AMOUNT",
             names="Name",
-            title="Longterm Investments distribution",
+            title="Longterm Investments distribution - " + str(totalLTInvestments),
         )
         fig.update_traces(textinfo="text+value+percent")
         return fig
 
     @staticmethod
     def createPocketMoneyVSPersonalExpensesPie(data):
-        dataFrame = data[(data["Category-Select"] == "Monthly Pocket Money") | (data["Category-Select"] == "Personal Expenses")]
+        dataFrame = copy.deepcopy(data)
+        dataFrame = dataFrame[(dataFrame["Category-Select"] == "Monthly Pocket Money") | (data["Category-Select"] == "Personal Expenses")]
         dataFrame = pd.pivot_table(dataFrame, values=["AMOUNT"], index=["CATEGORY"], aggfunc=sum).reset_index()
         fig = px.pie(
             dataFrame,
@@ -105,7 +117,8 @@ class GenerateDash:
 
     @staticmethod
     def createIncomeDistributionPie(data):
-        dataFrame = pd.pivot_table(data, values=["AMOUNT"], index=["CATEGORY"], aggfunc=sum).reset_index()
+        dataFrame = copy.deepcopy(data)
+        dataFrame = pd.pivot_table(dataFrame, values=["AMOUNT"], index=["CATEGORY"], aggfunc=sum).reset_index()
         fig = px.pie(dataFrame, values="AMOUNT", names="CATEGORY", title="Income distribution")
         fig.update_traces(textinfo="text+value+percent")
         return fig
@@ -189,7 +202,6 @@ class GenerateDash:
 
 
 if __name__ == "__main__":
-
     genDash = GenerateDash()
     genDash.startDashApp()
     # emitDashImages()

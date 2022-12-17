@@ -18,8 +18,20 @@ export async function getDBData(isTest = true) {
   if (isTest) {
     return tempdata;
   }
-  const myPage = await notion.databases.query({ database_id });
-  return myPage.results.map((val) => val.properties);
+  const results = [];
+  let myPage = await notion.databases.query({ database_id });
+  results.push(...myPage.results);
+
+  while (myPage.has_more) {
+    console.log('getting more pages');
+    myPage = await notion.databases.query({
+      database_id,
+      start_cursor: myPage.next_cursor,
+    });
+    results.push(...myPage.results);
+  }
+
+  return results.map((val) => val.properties);
 }
 
 async function getCsvDataFromNotion(isTest = false) {
