@@ -1,20 +1,32 @@
+/* eslint-disable functional/no-let */
+/* eslint-disable functional/no-loop-statement */
+/* eslint-disable functional/immutable-data */
+
 // const slackOAuthToken = getEnv('SLACK_OAUTH_TOKEN');
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 require('dotenv').config();
 // const discordToken = getEnv('DISCORD_TOKEN');
 // const discordClientID = getEnv('DISCORD_CLIENT_ID');
-const database_id = getEnv('NOTION_DB_ID');
+const database_id_expenses = getEnv('NOTION_DB_ID_EXPENSES');
+const database_id_accounts = getEnv('NOTION_DB_ID_ACCOUNTS');
+
 //imports
 // const { WebClient } = require('@slack/web-api');
+
+import * as fs from 'fs';
+
+import { Client } from '@notionhq/client';
+import * as date from 'date-and-time';
+import { Parser } from 'json2csv';
+
 import { tempdata } from './test';
-const date = require('date-and-time');
-const fs = require('fs');
-const { Client } = require('@notionhq/client');
 
 // Initializing
 // const web = new WebClient(slackOAuthToken);
 const notion = new Client({ auth: getEnv('NOTION_SECRET') });
 
-export async function getDBData(isTest = true) {
+export async function getDBData(database_id, isTest = false) {
   if (isTest) {
     return tempdata;
   }
@@ -34,8 +46,41 @@ export async function getDBData(isTest = true) {
   return results.map((val) => val.properties);
 }
 
-async function getCsvDataFromNotion(isTest = false) {
-  const res = await getDBData(isTest);
+export async function getCsvDataFromNotion_Accounts(isTest = false) {
+  const filename = 'accounts';
+  const res = await getDBData(database_id_accounts, isTest);
+  console.log(JSON.stringify(res));
+  const data = res
+    .map((v) => {
+      if (v.Date.date && v.Date.date.start) {
+        (v as any).Date = date.format(
+          new Date(v.Date.date.start),
+          'DD/MM/YYYY'
+        );
+        (v as any)['Amount'] = v['Amount'].number;
+        (v as any)['Name'] = v['Name'].title[0].plain_text;
+        (v as any)['Category-Select'] = v['Category-Select'].select.name;
+        return v;
+      } else {
+        console.log('Invalid entry', v, v.Date);
+        return null;
+      }
+    })
+    .filter((v) => v);
+  await fs.writeFileSync(`${filename}.json`, JSON.stringify(data));
+  try {
+    const parser = new Parser();
+    const csv = parser.parse(data);
+    await fs.writeFileSync(`${filename}.csv`, csv);
+  } catch (err) {
+    `${filename}`;
+    console.error(err);
+  }
+}
+
+export async function getCsvDataFromNotion_Expenses(isTest = false) {
+  const filename = 'expenses';
+  const res = await getDBData(database_id_expenses, isTest);
   const data = res
     .map((v) => {
       if (v.Date.date && v.Date.date.start) {
@@ -53,14 +98,12 @@ async function getCsvDataFromNotion(isTest = false) {
       }
     })
     .filter((v) => v);
-
-  await fs.writeFileSync('data.json', JSON.stringify(data));
+  await fs.writeFileSync(`${filename}.json`, JSON.stringify(data));
   const { Parser } = require('json2csv');
-
   try {
     const parser = new Parser();
     const csv = parser.parse(data);
-    await fs.writeFileSync('data.csv', csv);
+    await fs.writeFileSync(`${filename}.csv`, csv);
   } catch (err) {
     console.error(err);
   }
@@ -74,7 +117,8 @@ export async function makeChartsPy(): Promise<void> {
 
 async function main() {
   // const slackThread = await sendSlack('Started expenses analysis');
-  await getCsvDataFromNotion();
+  await getCsvDataFromNotion_Expenses();
+  //   await getCsvDataFromNotion_Accounts();
   //   await makeChartsPy();
   const files = fs.readdirSync('images');
   const uris = [];

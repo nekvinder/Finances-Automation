@@ -11,13 +11,14 @@ from dash.dependencies import Input, Output
 import os.path
 import time
 
+ideal_income_distribution = {"Long Term Investments": 0.6, "Emergency Fund": 0.05}
 PERSONAL_EXPENSES_LIMIT = 10000
 
 
 class GetExpenses:
     @staticmethod
     def getData():
-        file = "data.csv"
+        file = "expenses.csv"
         last_modified_csv = "Last Modified: %s" % time.ctime(os.path.getmtime(file))
         df = pd.read_csv(file)
         df["DATEP"] = pd.to_datetime(df.Date, format="%d/%m/%Y")
@@ -70,8 +71,38 @@ class GenerateDash:
     @staticmethod
     def createGuidelinesText(data):
         dataFrame = copy.deepcopy(data)
-        text = ''
 
+        dataFrame = pd.pivot_table(dataFrame, values=["AMOUNT"], index=["CATEGORY"], aggfunc=sum).reset_index()
+        total_expenses = dataFrame["AMOUNT"].sum()
+        dataFrame["amount_percentage"] = dataFrame["AMOUNT"] / total_expenses
+        print(dataFrame)
+        text = ""
+        for category, ideal_currentCategory_percentage in ideal_income_distribution.items():
+            ideal_other_percentage = 1 - ideal_currentCategory_percentage
+            current_amount = dataFrame[dataFrame["CATEGORY"] == category]["AMOUNT"].values[0]
+            current_percentage = float(dataFrame[dataFrame["CATEGORY"] == category]["amount_percentage"].values[0])
+            other_amount = total_expenses - current_amount
+            falling_percentage = ideal_currentCategory_percentage - current_percentage
+            if falling_percentage > 0:
+                print("current_percentage", current_percentage)
+                print("falling_percentage", falling_percentage)
+                print("total_expenses", total_expenses)
+                # text += f'{category} should be {percentage * 100}% of your expenses. Currently it is falling by {falling_percentage * 100}%\n'
+                rounded_remaining_amount = round(((ideal_currentCategory_percentage * other_amount) / ideal_other_percentage) - current_amount)
+                text += f"You should add {rounded_remaining_amount} to { category }\n"
+
+        print(text)
+
+        return text
+
+    @staticmethod
+    def getMonthlyPassiveIncome(data):
+        dataFrame = copy.deepcopy(data)
+        dataFrame = pd.pivot_table(dataFrame, values=["AMOUNT"], index=["CATEGORY"], aggfunc=sum).reset_index()
+        invested_amount = dataFrame[dataFrame["CATEGORY"] == "Long Term Investments"]["AMOUNT"].values[0]
+        yearly_income = invested_amount * 0.07
+        monthly_income = round(yearly_income / 12, -1)
+        return f" current monthly income is {monthly_income}\n"
 
     @staticmethod
     def createNonInvestmentsTimeline(data):
@@ -88,15 +119,13 @@ class GenerateDash:
     @staticmethod
     def createLTInvestmentsPie(data):
         dataFrame = copy.deepcopy(data)
-        dataFrame = dataFrame[(dataFrame["Category-Select"] == "Long Term Investments")]
-        dataFrame = pd.pivot_table(dataFrame, values=["AMOUNT"], index=["Name"], aggfunc=sum).reset_index()
-        totalLTInvestments = sum(dataFrame['AMOUNT'])
-        print(dataFrame)
+        dataFrame = dataFrame[(dataFrame["CATEGORY"] == "Long Term Investments")]
+        pvtTable = pd.pivot_table(dataFrame, values=["AMOUNT"], index=["Name"], aggfunc=sum).reset_index()
         fig = px.pie(
-            dataFrame,
+            pvtTable,
             values="AMOUNT",
             names="Name",
-            title="Longterm Investments distribution - " + str(totalLTInvestments),
+            title="Longterm Investments distribution - " + GenerateDash.getMonthlyPassiveIncome(data),
         )
         fig.update_traces(textinfo="text+value+percent")
         return fig
@@ -126,7 +155,7 @@ class GenerateDash:
     @staticmethod
     def getDataTable(data):
         newData = copy.deepcopy(data)
-        print(newData.columns)
+        print("columns list : " + str(list(newData.columns)))
         keepCols = ["Name", "Date", "Category-Select", "Amount"]
         deleteCols = [x for x in newData.columns.tolist() if x not in keepCols]
         for col in deleteCols:
@@ -166,6 +195,7 @@ class GenerateDash:
     def startDashApp(self):
         df = self.df
         app = dash.Dash(__name__)  # type: ignore
+        guidelines = self.createGuidelinesText(df)
         app.layout = html.Div(
             children=[
                 html.Div(
@@ -173,11 +203,19 @@ class GenerateDash:
                     className="header",
                     style={"backgroundColor": "#F5F5F5"},
                 ),
-                self.getHtmlDiv(self.createLTInvestmentsPie(df), False),
+                html.Div(
+                    children=[
+                        html.H3(children=f"Pending tasks", className="header-description", style={"textAlign": "center"}),
+                        html.P(children=guidelines.split("\n"), className="header-description", style={"textAlign": "center"}),
+                    ],
+                    className="header",
+                    style={"backgroundColor": "#F5F5F5"},
+                ),
                 html.Div(
                     children=[self.getHtmlDiv(self.createIncomeDistributionPie(df), False), self.getHtmlDiv(self.createPocketMoneyVSPersonalExpensesPie(df), False)],
                     style={"display": "flex", "flex-direction": "row"},
                 ),
+                self.getHtmlDiv(self.createLTInvestmentsPie(df), False),
                 self.getHtmlDiv(self.createMonthlyPersonalExpensesBars("Keep check on the following", df, ["Trips And Lux", "Mom", "Emergency Fund", "Long Term Investments"])),
                 self.getHtmlDiv(self.createMonthlyPersonalExpensesBars("Income distribution", df)),
                 # getHtmlDiv(createNonInvestmentsTimeline(df)),

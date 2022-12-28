@@ -1,0 +1,1104 @@
+[
+  {
+    "Category": {
+      "id": "%23Bmk",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Date": {
+      "id": "(%2B4t",
+      "type": "date",
+      "date": { "start": "2022-12-19", "end": null, "time_zone": null }
+    },
+    "Related to Categories (1) (Income Records)": {
+      "id": "VWbu",
+      "type": "relation",
+      "relation": [],
+      "has_more": false
+    },
+    "Account": {
+      "id": "c_uv",
+      "type": "relation",
+      "relation": [{ "id": "57b09cf5-da06-4fa6-a0b1-b9cf86bbea97" }],
+      "has_more": false
+    },
+    "Amount": { "id": "%7DrS7", "type": "number", "number": 120063.64 },
+    "Name": {
+      "id": "title",
+      "type": "title",
+      "title": [
+        {
+          "type": "text",
+          "text": { "content": "Accounting error fix", "link": null },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "Accounting error fix",
+          "href": null
+        }
+      ]
+    }
+  },
+  {
+    "Category": {
+      "id": "%23Bmk",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Date": {
+      "id": "(%2B4t",
+      "type": "date",
+      "date": { "start": "2022-12-19", "end": null, "time_zone": null }
+    },
+    "Related to Categories (1) (Income Records)": {
+      "id": "VWbu",
+      "type": "relation",
+      "relation": [],
+      "has_more": false
+    },
+    "Account": {
+      "id": "c_uv",
+      "type": "relation",
+      "relation": [{ "id": "57b09cf5-da06-4fa6-a0b1-b9cf86bbea97" }],
+      "has_more": false
+    },
+    "Amount": { "id": "%7DrS7", "type": "number", "number": 8377.95 },
+    "Name": {
+      "id": "title",
+      "type": "title",
+      "title": [
+        {
+          "type": "text",
+          "text": { "content": "Pocket money cash intake", "link": null },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "Pocket money cash intake",
+          "href": null
+        }
+      ]
+    }
+  },
+  {
+    "Category": {
+      "id": "%23Bmk",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Date": {
+      "id": "(%2B4t",
+      "type": "date",
+      "date": { "start": "2022-12-19", "end": null, "time_zone": null }
+    },
+    "Related to Categories (1) (Income Records)": {
+      "id": "VWbu",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Account": {
+      "id": "c_uv",
+      "type": "relation",
+      "relation": [{ "id": "57b09cf5-da06-4fa6-a0b1-b9cf86bbea97" }],
+      "has_more": false
+    },
+    "Amount": { "id": "%7DrS7", "type": "number", "number": 19548.97 },
+    "Name": {
+      "id": "title",
+      "type": "title",
+      "title": [
+        {
+          "type": "text",
+          "text": {
+            "content": "Internal Bank Transfer from PAytm",
+            "link": null
+          },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "Internal Bank Transfer from PAytm",
+          "href": null
+        }
+      ]
+    }
+  },
+  {
+    "Category": {
+      "id": "%23Bmk",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Date": {
+      "id": "(%2B4t",
+      "type": "date",
+      "date": { "start": "2022-12-19", "end": null, "time_zone": null }
+    },
+    "Related to Categories (1) (Income Records)": {
+      "id": "VWbu",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Account": {
+      "id": "c_uv",
+      "type": "relation",
+      "relation": [{ "id": "57b09cf5-da06-4fa6-a0b1-b9cf86bbea97" }],
+      "has_more": false
+    },
+    "Amount": { "id": "%7DrS7", "type": "number", "number": 63291.87 },
+    "Name": {
+      "id": "title",
+      "type": "title",
+      "title": [
+        {
+          "type": "text",
+          "text": {
+            "content": "Internal Bank Transfer from PAytm",
+            "link": null
+          },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "Internal Bank Transfer from PAytm",
+          "href": null
+        }
+      ]
+    }
+  },
+  {
+    "Category": {
+      "id": "%23Bmk",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Date": {
+      "id": "(%2B4t",
+      "type": "date",
+      "date": { "start": "2022-12-19", "end": null, "time_zone": null }
+    },
+    "Related to Categories (1) (Income Records)": {
+      "id": "VWbu",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Account": {
+      "id": "c_uv",
+      "type": "relation",
+      "relation": [{ "id": "d79b5be7-5f65-45f5-8a4d-7e7e96912c64" }],
+      "has_more": false
+    },
+    "Amount": { "id": "%7DrS7", "type": "number", "number": 4587.03 },
+    "Name": {
+      "id": "title",
+      "type": "title",
+      "title": [
+        {
+          "type": "text",
+          "text": {
+            "content": "Internal Bank Transfer from PAytm",
+            "link": null
+          },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "Internal Bank Transfer from PAytm",
+          "href": null
+        }
+      ]
+    }
+  },
+  {
+    "Category": {
+      "id": "%23Bmk",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Date": {
+      "id": "(%2B4t",
+      "type": "date",
+      "date": { "start": "2022-12-18", "end": null, "time_zone": null }
+    },
+    "Related to Categories (1) (Income Records)": {
+      "id": "VWbu",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Account": {
+      "id": "c_uv",
+      "type": "relation",
+      "relation": [{ "id": "ef1abf91-0fb0-48aa-85fa-e4732326cb3d" }],
+      "has_more": false
+    },
+    "Amount": { "id": "%7DrS7", "type": "number", "number": 250000 },
+    "Name": {
+      "id": "title",
+      "type": "title",
+      "title": [
+        {
+          "type": "text",
+          "text": {
+            "content": "Internal Bank Transfer from PAytm",
+            "link": null
+          },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "Internal Bank Transfer from PAytm",
+          "href": null
+        }
+      ]
+    }
+  },
+  {
+    "Category": {
+      "id": "%23Bmk",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Date": {
+      "id": "(%2B4t",
+      "type": "date",
+      "date": { "start": "2022-11-06", "end": null, "time_zone": null }
+    },
+    "Related to Categories (1) (Income Records)": {
+      "id": "VWbu",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Account": {
+      "id": "c_uv",
+      "type": "relation",
+      "relation": [{ "id": "ef1abf91-0fb0-48aa-85fa-e4732326cb3d" }],
+      "has_more": false
+    },
+    "Amount": { "id": "%7DrS7", "type": "number", "number": 1248 },
+    "Name": {
+      "id": "title",
+      "type": "title",
+      "title": [
+        {
+          "type": "text",
+          "text": {
+            "content": "Internal Bank Transfer from PAytm",
+            "link": null
+          },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "Internal Bank Transfer from PAytm",
+          "href": null
+        }
+      ]
+    }
+  },
+  {
+    "Category": {
+      "id": "%23Bmk",
+      "type": "relation",
+      "relation": [],
+      "has_more": false
+    },
+    "Date": { "id": "(%2B4t", "type": "date", "date": null },
+    "Related to Categories (1) (Income Records)": {
+      "id": "VWbu",
+      "type": "relation",
+      "relation": [],
+      "has_more": false
+    },
+    "Account": {
+      "id": "c_uv",
+      "type": "relation",
+      "relation": [],
+      "has_more": false
+    },
+    "Amount": { "id": "%7DrS7", "type": "number", "number": null },
+    "Name": { "id": "title", "type": "title", "title": [] }
+  },
+  {
+    "Category": {
+      "id": "%23Bmk",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Date": {
+      "id": "(%2B4t",
+      "type": "date",
+      "date": { "start": "2022-12-08", "end": null, "time_zone": null }
+    },
+    "Related to Categories (1) (Income Records)": {
+      "id": "VWbu",
+      "type": "relation",
+      "relation": [],
+      "has_more": false
+    },
+    "Account": {
+      "id": "c_uv",
+      "type": "relation",
+      "relation": [{ "id": "d79b5be7-5f65-45f5-8a4d-7e7e96912c64" }],
+      "has_more": false
+    },
+    "Amount": { "id": "%7DrS7", "type": "number", "number": 10000 },
+    "Name": {
+      "id": "title",
+      "type": "title",
+      "title": [
+        {
+          "type": "text",
+          "text": { "content": "Internal bank transfer", "link": null },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "Internal bank transfer",
+          "href": null
+        }
+      ]
+    }
+  },
+  {
+    "Category": {
+      "id": "%23Bmk",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Date": {
+      "id": "(%2B4t",
+      "type": "date",
+      "date": { "start": "2022-12-11", "end": null, "time_zone": null }
+    },
+    "Related to Categories (1) (Income Records)": {
+      "id": "VWbu",
+      "type": "relation",
+      "relation": [],
+      "has_more": false
+    },
+    "Account": {
+      "id": "c_uv",
+      "type": "relation",
+      "relation": [{ "id": "b6a561fa-78fc-4e21-b90c-1efb1953c391" }],
+      "has_more": false
+    },
+    "Amount": { "id": "%7DrS7", "type": "number", "number": 10000 },
+    "Name": {
+      "id": "title",
+      "type": "title",
+      "title": [
+        {
+          "type": "text",
+          "text": { "content": "Internal bank transfer", "link": null },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "Internal bank transfer",
+          "href": null
+        }
+      ]
+    }
+  },
+  {
+    "Category": {
+      "id": "%23Bmk",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Date": {
+      "id": "(%2B4t",
+      "type": "date",
+      "date": { "start": "2022-10-06", "end": null, "time_zone": null }
+    },
+    "Related to Categories (1) (Income Records)": {
+      "id": "VWbu",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Account": {
+      "id": "c_uv",
+      "type": "relation",
+      "relation": [{ "id": "57b09cf5-da06-4fa6-a0b1-b9cf86bbea97" }],
+      "has_more": false
+    },
+    "Amount": { "id": "%7DrS7", "type": "number", "number": 198250 },
+    "Name": {
+      "id": "title",
+      "type": "title",
+      "title": [
+        {
+          "type": "text",
+          "text": { "content": "Salary", "link": null },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "Salary",
+          "href": null
+        }
+      ]
+    }
+  },
+  {
+    "Category": {
+      "id": "%23Bmk",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Date": {
+      "id": "(%2B4t",
+      "type": "date",
+      "date": { "start": "2021-05-01", "end": null, "time_zone": null }
+    },
+    "Related to Categories (1) (Income Records)": {
+      "id": "VWbu",
+      "type": "relation",
+      "relation": [],
+      "has_more": false
+    },
+    "Account": {
+      "id": "c_uv",
+      "type": "relation",
+      "relation": [{ "id": "b6a561fa-78fc-4e21-b90c-1efb1953c391" }],
+      "has_more": false
+    },
+    "Amount": { "id": "%7DrS7", "type": "number", "number": 88858 },
+    "Name": {
+      "id": "title",
+      "type": "title",
+      "title": [
+        {
+          "type": "text",
+          "text": {
+            "content": "Internal Bank Transfer from BoB - goego leftover",
+            "link": null
+          },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "Internal Bank Transfer from BoB - goego leftover",
+          "href": null
+        }
+      ]
+    }
+  },
+  {
+    "Category": {
+      "id": "%23Bmk",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Date": {
+      "id": "(%2B4t",
+      "type": "date",
+      "date": { "start": "2022-11-03", "end": null, "time_zone": null }
+    },
+    "Related to Categories (1) (Income Records)": {
+      "id": "VWbu",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Account": {
+      "id": "c_uv",
+      "type": "relation",
+      "relation": [{ "id": "ef1abf91-0fb0-48aa-85fa-e4732326cb3d" }],
+      "has_more": false
+    },
+    "Amount": { "id": "%7DrS7", "type": "number", "number": 200000 },
+    "Name": {
+      "id": "title",
+      "type": "title",
+      "title": [
+        {
+          "type": "text",
+          "text": {
+            "content": "Internal Bank Transfer from BOB",
+            "link": null
+          },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "Internal Bank Transfer from BOB",
+          "href": null
+        }
+      ]
+    }
+  },
+  {
+    "Category": {
+      "id": "%23Bmk",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Date": {
+      "id": "(%2B4t",
+      "type": "date",
+      "date": { "start": "2022-10-25", "end": null, "time_zone": null }
+    },
+    "Related to Categories (1) (Income Records)": {
+      "id": "VWbu",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Account": {
+      "id": "c_uv",
+      "type": "relation",
+      "relation": [{ "id": "57b09cf5-da06-4fa6-a0b1-b9cf86bbea97" }],
+      "has_more": false
+    },
+    "Amount": { "id": "%7DrS7", "type": "number", "number": 198077 },
+    "Name": {
+      "id": "title",
+      "type": "title",
+      "title": [
+        {
+          "type": "text",
+          "text": { "content": "Salary - wk", "link": null },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "Salary - wk",
+          "href": null
+        }
+      ]
+    }
+  },
+  {
+    "Category": {
+      "id": "%23Bmk",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Date": {
+      "id": "(%2B4t",
+      "type": "date",
+      "date": { "start": "2022-09-22", "end": null, "time_zone": null }
+    },
+    "Related to Categories (1) (Income Records)": {
+      "id": "VWbu",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Account": {
+      "id": "c_uv",
+      "type": "relation",
+      "relation": [{ "id": "57b09cf5-da06-4fa6-a0b1-b9cf86bbea97" }],
+      "has_more": false
+    },
+    "Amount": { "id": "%7DrS7", "type": "number", "number": 212224 },
+    "Name": {
+      "id": "title",
+      "type": "title",
+      "title": [
+        {
+          "type": "text",
+          "text": { "content": "Salary", "link": null },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "Salary",
+          "href": null
+        }
+      ]
+    }
+  },
+  {
+    "Category": {
+      "id": "%23Bmk",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Date": {
+      "id": "(%2B4t",
+      "type": "date",
+      "date": { "start": "2022-08-22", "end": null, "time_zone": null }
+    },
+    "Related to Categories (1) (Income Records)": {
+      "id": "VWbu",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Account": {
+      "id": "c_uv",
+      "type": "relation",
+      "relation": [{ "id": "57b09cf5-da06-4fa6-a0b1-b9cf86bbea97" }],
+      "has_more": false
+    },
+    "Amount": { "id": "%7DrS7", "type": "number", "number": 198077 },
+    "Name": {
+      "id": "title",
+      "type": "title",
+      "title": [
+        {
+          "type": "text",
+          "text": { "content": "Salary", "link": null },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "Salary",
+          "href": null
+        }
+      ]
+    }
+  },
+  {
+    "Category": {
+      "id": "%23Bmk",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Date": {
+      "id": "(%2B4t",
+      "type": "date",
+      "date": { "start": "2022-07-26", "end": null, "time_zone": null }
+    },
+    "Related to Categories (1) (Income Records)": {
+      "id": "VWbu",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Account": {
+      "id": "c_uv",
+      "type": "relation",
+      "relation": [{ "id": "57b09cf5-da06-4fa6-a0b1-b9cf86bbea97" }],
+      "has_more": false
+    },
+    "Amount": { "id": "%7DrS7", "type": "number", "number": 198947 },
+    "Name": {
+      "id": "title",
+      "type": "title",
+      "title": [
+        {
+          "type": "text",
+          "text": { "content": "Salary", "link": null },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "Salary",
+          "href": null
+        }
+      ]
+    }
+  },
+  {
+    "Category": {
+      "id": "%23Bmk",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Date": {
+      "id": "(%2B4t",
+      "type": "date",
+      "date": { "start": "2022-06-25", "end": null, "time_zone": null }
+    },
+    "Related to Categories (1) (Income Records)": {
+      "id": "VWbu",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Account": {
+      "id": "c_uv",
+      "type": "relation",
+      "relation": [{ "id": "57b09cf5-da06-4fa6-a0b1-b9cf86bbea97" }],
+      "has_more": false
+    },
+    "Amount": { "id": "%7DrS7", "type": "number", "number": 198947 },
+    "Name": {
+      "id": "title",
+      "type": "title",
+      "title": [
+        {
+          "type": "text",
+          "text": { "content": "Salary", "link": null },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "Salary",
+          "href": null
+        }
+      ]
+    }
+  },
+  {
+    "Category": {
+      "id": "%23Bmk",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Date": {
+      "id": "(%2B4t",
+      "type": "date",
+      "date": { "start": "2022-05-25", "end": null, "time_zone": null }
+    },
+    "Related to Categories (1) (Income Records)": {
+      "id": "VWbu",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Account": {
+      "id": "c_uv",
+      "type": "relation",
+      "relation": [{ "id": "57b09cf5-da06-4fa6-a0b1-b9cf86bbea97" }],
+      "has_more": false
+    },
+    "Amount": { "id": "%7DrS7", "type": "number", "number": 198250 },
+    "Name": {
+      "id": "title",
+      "type": "title",
+      "title": [
+        {
+          "type": "text",
+          "text": { "content": "Salary", "link": null },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "Salary",
+          "href": null
+        }
+      ]
+    }
+  },
+  {
+    "Category": {
+      "id": "%23Bmk",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Date": {
+      "id": "(%2B4t",
+      "type": "date",
+      "date": { "start": "2022-04-28", "end": null, "time_zone": null }
+    },
+    "Related to Categories (1) (Income Records)": {
+      "id": "VWbu",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Account": {
+      "id": "c_uv",
+      "type": "relation",
+      "relation": [{ "id": "57b09cf5-da06-4fa6-a0b1-b9cf86bbea97" }],
+      "has_more": false
+    },
+    "Amount": { "id": "%7DrS7", "type": "number", "number": 198251 },
+    "Name": {
+      "id": "title",
+      "type": "title",
+      "title": [
+        {
+          "type": "text",
+          "text": { "content": "Salary", "link": null },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "Salary",
+          "href": null
+        }
+      ]
+    }
+  },
+  {
+    "Category": {
+      "id": "%23Bmk",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Date": {
+      "id": "(%2B4t",
+      "type": "date",
+      "date": { "start": "2022-03-29", "end": null, "time_zone": null }
+    },
+    "Related to Categories (1) (Income Records)": {
+      "id": "VWbu",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Account": {
+      "id": "c_uv",
+      "type": "relation",
+      "relation": [{ "id": "57b09cf5-da06-4fa6-a0b1-b9cf86bbea97" }],
+      "has_more": false
+    },
+    "Amount": { "id": "%7DrS7", "type": "number", "number": 249713 },
+    "Name": {
+      "id": "title",
+      "type": "title",
+      "title": [
+        {
+          "type": "text",
+          "text": { "content": "Salary", "link": null },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "Salary",
+          "href": null
+        }
+      ]
+    }
+  },
+  {
+    "Category": {
+      "id": "%23Bmk",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Date": {
+      "id": "(%2B4t",
+      "type": "date",
+      "date": { "start": "2022-03-01", "end": null, "time_zone": null }
+    },
+    "Related to Categories (1) (Income Records)": {
+      "id": "VWbu",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Account": {
+      "id": "c_uv",
+      "type": "relation",
+      "relation": [{ "id": "57b09cf5-da06-4fa6-a0b1-b9cf86bbea97" }],
+      "has_more": false
+    },
+    "Amount": { "id": "%7DrS7", "type": "number", "number": 169000 },
+    "Name": {
+      "id": "title",
+      "type": "title",
+      "title": [
+        {
+          "type": "text",
+          "text": { "content": "Salary", "link": null },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "Salary",
+          "href": null
+        }
+      ]
+    }
+  },
+  {
+    "Category": {
+      "id": "%23Bmk",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Date": {
+      "id": "(%2B4t",
+      "type": "date",
+      "date": { "start": "2022-03-01", "end": null, "time_zone": null }
+    },
+    "Related to Categories (1) (Income Records)": {
+      "id": "VWbu",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Account": {
+      "id": "c_uv",
+      "type": "relation",
+      "relation": [{ "id": "57b09cf5-da06-4fa6-a0b1-b9cf86bbea97" }],
+      "has_more": false
+    },
+    "Amount": { "id": "%7DrS7", "type": "number", "number": 429703 },
+    "Name": {
+      "id": "title",
+      "type": "title",
+      "title": [
+        {
+          "type": "text",
+          "text": { "content": "Salary", "link": null },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "Salary",
+          "href": null
+        }
+      ]
+    }
+  },
+  {
+    "Category": {
+      "id": "%23Bmk",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Date": {
+      "id": "(%2B4t",
+      "type": "date",
+      "date": { "start": "2022-11-25", "end": null, "time_zone": null }
+    },
+    "Related to Categories (1) (Income Records)": {
+      "id": "VWbu",
+      "type": "relation",
+      "relation": [],
+      "has_more": true
+    },
+    "Account": {
+      "id": "c_uv",
+      "type": "relation",
+      "relation": [{ "id": "57b09cf5-da06-4fa6-a0b1-b9cf86bbea97" }],
+      "has_more": false
+    },
+    "Amount": { "id": "%7DrS7", "type": "number", "number": 198077 },
+    "Name": {
+      "id": "title",
+      "type": "title",
+      "title": [
+        {
+          "type": "text",
+          "text": { "content": "Salary", "link": null },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "Salary",
+          "href": null
+        }
+      ]
+    }
+  }
+]
